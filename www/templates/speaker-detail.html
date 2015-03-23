@@ -1,0 +1,16 @@
+<ion-view view-title="Speaker">
+
+  <ion-content>
+
+  <div class="list card">
+      <div class="item item-avatar">
+                  <img src="{{speaker.picture_url}}">
+        {{speaker.first_name}} {{speaker.last_name}}
+      </div>
+      <div class="item item-text-wrap" ng-bind-html="speaker.bio">
+      </div>
+    </div>
+
+  </ion-content>
+
+</ion-view>
