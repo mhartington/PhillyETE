@@ -1,6 +1,6 @@
 # Philly ETE
 
- This is a sample presentation for Devnexus, pulling information from the site such as a list of speakers and presentations.
+ This is a sample presentation for [PhillyETE](http://phillyemergingtech.com/), pulling information from the site such as a list of speakers and presentations.
 
 ### Setup
 
