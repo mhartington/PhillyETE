@@ -1,5 +1,5 @@
 <ion-view view-title="Speakers">
-  <form novalidate ng-submit="doSearch()">
+  <form novalidate>
 
     <ion-header-bar class="bar-subheader item-input-inset bar-positive">
       <label class="item-input-wrapper">
@@ -12,14 +12,15 @@
   </form>
 
   <ion-content>
-      <button ng-if="hasError" class="button-clear button-full button button-balanced" ng-click="load()">Try Again</button>
+    <button ng-if="hasError" class="button-clear button-full button button-balanced"
+    ng-click="load()">Try Again</button>
 
     <ion-list>
       <ion-item class="item-avatar" collection-repeat="speaker in speakers | filter:searchSpeakers"
       ui-sref="menu.speaker({speakerId:speaker.id})">
         <img ng-src="{{speaker.picture_url}}">
         <h2>{{speaker.first_name}} {{speaker.last_name}}</h2>
-        <p>{{speaker.id}}</p>
+        <!-- <p>{{speaker.id}}</p> -->
       </ion-item>
     </ion-list>
   </ion-content>

@@ -1,5 +1,5 @@
 <ion-view view-title="Sessions">
-  <form novalidate ng-submit="doSearch()">
+  <form novalidate>
     <ion-header-bar class="bar-subheader item-input-inset bar-positive">
       <label class="item-input-wrapper">
         <i class="icon ion-ios-search placeholder-icon"></i>
@@ -16,7 +16,7 @@
     ng-click="load()">Try Again</button>
 
     <ion-list>
-      <ion-item collection-repeat="session in sessions | filter:searchSessions" ui-sref="menu.session({sessionId:session.id})">
+      <ion-item ng-repeat="session in sessions | filter:searchSessions" ui-sref="menu.session({sessionId:session.id})">
         <h2>{{session.name}}</h2>
         <p ng-repeat="speaker in session.speakers">{{speaker.firstName}} {{speaker.lastName}}</p>
       </ion-item>

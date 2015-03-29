@@ -19,7 +19,7 @@ angular.module('phillyete', [
     }
     if (window.StatusBar) {
       if (ionic.Platform.isAndroid()) {
-        StatusBar.backgroundColorByHexString("#008FB7");
+        StatusBar.backgroundColorByHexString('#1976D2');
       } else {
         StatusBar.styleLightContent();
       }
