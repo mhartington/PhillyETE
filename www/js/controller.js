@@ -210,7 +210,7 @@ angular.module('phillyete.controllers', [])
               latitude: bounds.getSouthWest().lat(),
               longitude: bounds.getSouthWest().lng()
             }
-          }
+          };
 
           _.each(newMarkers, function(marker) {
             marker.closeClick = function() {
