@@ -1,12 +1,14 @@
 <ion-view view-title="Sessions">
   <form novalidate>
     <ion-header-bar class="bar-subheader item-input-inset bar-positive">
-      <label class="item-input-wrapper">
+      <span class="item-input-wrapper">
         <i class="icon ion-ios-search placeholder-icon"></i>
         <input type="text" placeholder="Search" ng-model="searchSessions" ng-change="scrollTop(); resize()"
         ng-focus="inputUp()" ng-blur="inputDown()">
-      </label>
+      
       <a ng-if="searchSessions.length" ng-click="clearSearch()" class="button button-icon ion-ios-close-empty"></a>
+  </span>
+      <!-- <a ng&#45;if="searchSessions.length" ng&#45;click="clearSearch()" class="button button&#45;icon ion&#45;ios&#45;close&#45;empty"></a> -->
     </ion-header-bar>
   </form>
 

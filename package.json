@@ -15,14 +15,38 @@
     "shelljs": "^0.3.0"
   },
   "cordovaPlugins": [
-    "https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git",
-    "com.ionic.keyboard",
     "org.apache.cordova.console",
     "org.apache.cordova.device",
+    {
+      "locator": "https://github.com/apache/cordova-plugin-statusbar.git",
+      "id": "org.apache.cordova.statusbar"
+    },
+    {
+      "locator": "https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git",
+      "id": "nl.x-services.plugins.socialsharing"
+    },
     "org.apache.cordova.camera",
-    "https://github.com/apache/cordova-plugin-statusbar.git",
-    "org.apache.cordova.splashscreen",
     "org.apache.cordova.dialogs",
+    "com.ionic.keyboard",
+    "org.apache.cordova.splashscreen",
     "org.apache.cordova.geolocation"
+  ],
+  "cordovaPlatforms": [
+    {
+      "platform": ".DS_Store",
+      "version": "Not installed",
+      "locator": ".DS_Store"
+    },
+    {
+      "platform": "android",
+      "version": "3.7.1",
+      "locator": "android"
+    },
+    "ios",
+    {
+      "platform": "ios",
+      "version": "3.8.0",
+      "locator": "ios"
+    }
   ]
 }
