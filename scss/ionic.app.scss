@@ -36,8 +36,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   max-width: 500px;
   margin: auto
 }
-$dark-positive : #008cb3;
- .custom {
-  background-color: $dark-positive !important;
-  border-color: $dark-positive !important
+
+a.button-reset,
+a.button-reset.icon:before {
+  padding: 0 10px;
+  font-size: 24px; 
+  border: none;
 }

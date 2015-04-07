@@ -7618,6 +7618,7 @@ a.button {
   max-width: 500px;
   margin: auto; }
 
-.custom {
-  background-color: #008cb3 !important;
-  border-color: #008cb3 !important; }
+a.button-reset, a.button-reset.icon:before {
+  padding: 0 10px;
+  font-size: 24px;
+  border: none; }

@@ -2,12 +2,12 @@
   <form novalidate>
 
     <ion-header-bar class="bar-subheader item-input-inset bar-positive">
-      <label class="item-input-wrapper">
+      <div class="item-input-wrapper">
         <i class="icon ion-ios-search placeholder-icon"></i>
         <input type="text" placeholder="Search" ng-model="searchSpeakers" ng-change="scrollTop(); resize()"
         ng-focus="inputUp()" ng-blur="inputDown()">
-      </label>
-      <a ng-if="searchSessions.length" ng-click="clearSearch()" class="button button-icon ion-ios-close-empty"></a>
+      <a ng-show="searchSessions.length" ng-click="clearSearch()" class=" icon dark ion-ios-close-empty button-reset"></a>
+      </div>
     </ion-header-bar>
   </form>
 

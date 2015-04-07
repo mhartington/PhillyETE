@@ -22,7 +22,7 @@ angular.module('phillyete.factory', [])
       },
       allSpeakers: function() {
         return $http.get('js/data.json').then(function(responce) {
-          speakers = responce.data.speakers
+          speakers = responce.data.speakers;
           return speakers;
         });
       },
