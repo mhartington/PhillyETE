@@ -1,4 +1,9 @@
 <ion-view view-title="Session">
+  <ion-nav-buttons side="right">
+    <a class="button button-icon" ng-click="share(session)">
+      <i class="icon ion-share"></i>
+    </a>
+  </ion-nav-buttons>
   <ion-content>
     <ion-list>
       <div class="list card">
@@ -7,15 +12,13 @@
         </div>
         <div class="item">
           <p>Location: {{session.session_location_name}}</p>
+          <p>{{session.start_time | date:'EEEE, h:mma'}} - {{session.end_time| date:'h:mma'}}</p>
         </div>
-        <a class="item item-avatar"  ui-sref="menu.speaker({speakerId:session_speaker.id})">
-          <img src="{{session_speaker.picture_url}}"> {{session_speaker.first_name}} {{session_speaker.last_name}}
+        <a class="item item-avatar item-icon-right" ui-sref="menu.speaker({speakerId:session_speaker.id})">
+          <img src="{{session_speaker.picture_url}}"> {{session_speaker.first_name}}
+          {{session_speaker.last_name}}
+        <i class="icon ion-ios-arrow-right"></i>
         </a>
-        <div class="item tabs tabs-secondary tabs-icon-left">
-          <a class="tab-item" ng-click="share(session)">
-            <i class="icon ion-share"></i> Share
-          </a>
-        </div>
       </div>
     </ion-list>
   </ion-content>

@@ -4,9 +4,8 @@
       <div class="item-input-wrapper">
         <i class="icon ion-ios-search placeholder-icon"></i>
         <input type="text" placeholder="Search" ng-model="searchSessions" ng-change="scrollTop(); resize()">
-      <a ng-show="searchSessions.length" ng-click="clearSearch()" class=" icon dark ion-ios-close-empty button-reset"></a>
-  </div>
-      <!-- <a ng&#45;if="searchSessions.length" ng&#45;click="clearSearch()" class="button button&#45;icon ion&#45;ios&#45;close&#45;empty"></a> -->
+        <a ng-show="searchSessions.length" ng-click="clearSearch()" class=" icon dark ion-ios-close-empty button-reset"></a>
+      </div>
     </ion-header-bar>
   </form>
 
@@ -16,7 +15,8 @@
     ng-click="load()">Try Again</button>
 
     <ion-list>
-      <ion-item ng-repeat="session in sessions | filter:searchSessions" ui-sref="menu.session({sessionId:session.id})">
+      <ion-item ng-repeat="session in sessions | filter:searchSessions | orderBy:'start_time'"
+      ui-sref="menu.session({sessionId:session.id})">
         <h2>{{session.name}}</h2>
         <p ng-repeat="speaker in session.speakers">{{speaker.firstName}} {{speaker.lastName}}</p>
       </ion-item>

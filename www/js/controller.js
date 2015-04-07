@@ -39,7 +39,7 @@ angular.module('phillyete.controllers', [])
 
 })
 
-.controller('SessionCtrl', function($scope, AppData, $stateParams) {
+.controller('SessionCtrl', function($scope, AppData, $stateParams, $cordovaCamera, $cordovaSocialSharing) {
   AppData.allSessions().then(function() {
     $scope.session = AppData.getSession($stateParams.sessionId);
 
@@ -53,8 +53,12 @@ angular.module('phillyete.controllers', [])
 
   $scope.share = function(session) {
     // Message var that grabs the session title and speaker info
-    var message = "Attending " + session.name + ". #PhillyETE";
-
+    var message;
+    if ($scope.session_speaker.twitter) {
+      var message = "Attending " + session.name + " by @" + $scope.session_speaker.twitter + " #PhillyETE";
+    } else {
+      var message = "Attending " + session.name + ". #PhillyETE";
+    }
     // Variables that we pass into the camera api
     var options = {
       quality: 100,
@@ -104,7 +108,7 @@ angular.module('phillyete.controllers', [])
     $ionicScrollDelegate.resize();
   };
   $scope.clearSearch = function() {
-    $scope.searchSessions = '';
+    $scope.searchSpeakers = '';
     cordova.plugins.Keyboard.close();
 
   };

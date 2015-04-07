@@ -4,9 +4,8 @@
     <ion-header-bar class="bar-subheader item-input-inset bar-positive">
       <div class="item-input-wrapper">
         <i class="icon ion-ios-search placeholder-icon"></i>
-        <input type="text" placeholder="Search" ng-model="searchSpeakers" ng-change="scrollTop(); resize()"
-        ng-focus="inputUp()" ng-blur="inputDown()">
-      <a ng-show="searchSessions.length" ng-click="clearSearch()" class=" icon dark ion-ios-close-empty button-reset"></a>
+        <input type="text" placeholder="Search" ng-model="searchSpeakers" ng-change="scrollTop(); resize()">
+        <a ng-show="searchSpeakers.length" ng-click="clearSearch()" class=" icon dark ion-ios-close-empty button-reset"></a>
       </div>
     </ion-header-bar>
   </form>
@@ -16,7 +15,7 @@
     ng-click="load()">Try Again</button>
 
     <ion-list>
-      <ion-item class="item-avatar" collection-repeat="speaker in speakers | filter:searchSpeakers"
+      <ion-item class="item-avatar" collection-repeat="speaker in speakers | filter:searchSpeakers | orderBy:'last_name'"
       ui-sref="menu.speaker({speakerId:speaker.id})">
         <img ng-src="{{speaker.picture_url}}">
         <h2>{{speaker.first_name}} {{speaker.last_name}}</h2>
