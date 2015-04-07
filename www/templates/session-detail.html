@@ -5,6 +5,12 @@
         <div class="item item-body">
           <p ng-bind-html="session.description"></p>
         </div>
+        <div class="item">
+          <p>Location: {{session.session_location_name}}</p>
+        </div>
+        <a class="item item-avatar"  ui-sref="menu.speaker({speakerId:session_speaker.id})">
+          <img src="{{session_speaker.picture_url}}"> {{session_speaker.first_name}} {{session_speaker.last_name}}
+        </a>
         <div class="item tabs tabs-secondary tabs-icon-left">
           <a class="tab-item" ng-click="share(session)">
             <i class="icon ion-share"></i> Share

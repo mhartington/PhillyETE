@@ -42,8 +42,14 @@ angular.module('phillyete.controllers', [])
 .controller('SessionCtrl', function($scope, AppData, $stateParams) {
   AppData.allSessions().then(function() {
     $scope.session = AppData.getSession($stateParams.sessionId);
-  });
 
+
+
+    AppData.allSpeakers().then(function(data) {
+      $scope.session_speaker = AppData.getSpeaker($scope.session.speaker_ids);
+    });
+
+  });
 
   $scope.share = function(session) {
     // Message var that grabs the session title and speaker info
