@@ -26,7 +26,7 @@ angular.module('phillyete', [
     }
     $timeout(function() {
       navigator.splashscreen.hide();
-    }, 500);
+    });
   });
 })
 
