@@ -55,9 +55,9 @@ angular.module('phillyete.controllers', [])
     // Message var that grabs the session title and speaker info
     var message;
     if ($scope.session_speaker.twitter) {
-      var message = "Attending " + session.name + " by @" + $scope.session_speaker.twitter + " #PhillyETE";
+      message = "Attending " + session.name + " by @" + $scope.session_speaker.twitter + " #PhillyETE";
     } else {
-      var message = "Attending " + session.name + ". #PhillyETE";
+      message = "Attending " + session.name + ". #PhillyETE";
     }
     // Variables that we pass into the camera api
     var options = {
@@ -124,6 +124,7 @@ angular.module('phillyete.controllers', [])
   $scope.place = {};
   $scope.showPlaceDetails = function(param) {
     $scope.place = param;
+    console.log($scope.place);
   };
 })
 

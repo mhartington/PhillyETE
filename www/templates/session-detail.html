@@ -4,22 +4,20 @@
       <i class="icon ion-share"></i>
     </a>
   </ion-nav-buttons>
-  <ion-content>
+  <ion-content class="padding">
     <ion-list>
-      <div class="list card">
-        <div class="item item-body">
-          <p ng-bind-html="session.description"></p>
-        </div>
-        <div class="item">
-          <p>Location: {{session.session_location_name}}</p>
-          <p>{{session.start_time | date:'EEEE, h:mma'}} - {{session.end_time| date:'h:mma'}}</p>
-        </div>
-        <a class="item item-avatar item-icon-right" ui-sref="menu.speaker({speakerId:session_speaker.id})">
-          <img src="{{session_speaker.picture_url}}"> {{session_speaker.first_name}}
+      <!-- <pre>{{session | json}}</pre> -->
+      <h2>{{session.name}}</h2>
+      <p class="{{session.session_track_name | lowercase}}">Track: {{session.session_track_name}}</p>
+      <p>Location: {{session.session_location_name}}</p>
+      <p>{{session.start_time | date:'EEEE, h:mma'}} - {{session.end_time| date:'h:mma'}}</p>
+
+      <p ng-bind-html="session.description"></p>
+
+      <a class="button button-clear button-positive" ui-sref="menu.speaker({speakerId:session_speaker.id})">
+          {{session_speaker.first_name}}
           {{session_speaker.last_name}}
-        <i class="icon ion-ios-arrow-right"></i>
         </a>
-      </div>
     </ion-list>
   </ion-content>
 </ion-view>

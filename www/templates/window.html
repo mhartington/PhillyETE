@@ -1,3 +1,13 @@
 <div class="map-info" ng-controller="WindowCtrl" ng-init="showPlaceDetails(parameter)">
+  <p>
+    <strong>
 {{place.name}}
+</strong>
+  </p>
+
+  <p>
+    {{place.formatted_address}}
+  </p>
+
+<a href="">{{place.website}}</a>
 </div>

@@ -1,12 +1,15 @@
 <ion-view view-title="Speaker">
 
-  <ion-content>
-<pre>{{speaker | json}}</pre>
-  <div class="list card">
-      <div class="item item-avatar">
-                  <img src="{{speaker.picture_url}}">
-        {{speaker.first_name}} {{speaker.last_name}}
-      </div>
+  <ion-content class="padding">
+    <!-- <pre>{{speaker | json}}</pre> -->
+
+
+    <img class="block-img rounded" src="{{speaker.picture_url}}">
+
+
+    <h1>{{speaker.first_name}} {{speaker.last_name}}</h1>
+
+    <div class="list card">
       <div class="item item-text-wrap" ng-bind-html="speaker.bio">
       </div>
     </div>

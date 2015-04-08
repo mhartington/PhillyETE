@@ -37,9 +37,44 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   margin: auto
 }
 
+.rounded {
+  margin-top: 10px;
+  border-radius: 50%;
+  width: 80%;
+  max-width: 350px;
+}
+
 a.button-reset,
 a.button-reset.icon:before {
   padding: 0 10px;
   font-size: 24px;
   border: none;
+}
+
+p.agile {
+  color: #F64747
+}
+
+p.frameworks {
+  color: #2ecc71;
+}
+
+p.infrastructure {
+  color: #9b59b6
+}
+
+p.keynote {
+  color: #e67e22
+}
+
+p.languages {
+  color: #2980b9
+}
+
+p.managment {
+  color: #1abc9c
+}
+
+p.mobile {
+  color: #8e44ad
 }
