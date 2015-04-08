@@ -8,9 +8,9 @@
     <ion-list>
       <!-- <pre>{{session | json}}</pre> -->
       <h2>{{session.name}}</h2>
-      <p class="{{session.session_track_name | lowercase}}">Track: {{session.session_track_name}}</p>
-      <p>Location: {{session.session_location_name}}</p>
-      <p>{{session.start_time | date:'EEEE, h:mma'}} - {{session.end_time| date:'h:mma'}}</p>
+      <h3>Track: {{session.session_track_name}}</h3>
+      <h4>Location: {{session.session_location_name}}</h4>
+      <h4>{{session.start_time | date:'EEEE, h:mma'}} - {{session.end_time| date:'h:mma'}}</h4>
 
       <p ng-bind-html="session.description"></p>
 
