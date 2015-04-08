@@ -7629,23 +7629,23 @@ a.button-reset, a.button-reset.icon:before {
   font-size: 24px;
   border: none; }
 
-p.agile {
+h3.agile {
   color: #F64747; }
 
-p.frameworks {
+h3.frameworks {
   color: #2ecc71; }
 
-p.infrastructure {
+h3.infrastructure {
   color: #9b59b6; }
 
-p.keynote {
+h3.keynote {
   color: #e67e22; }
 
-p.languages {
+h3.languages {
   color: #2980b9; }
 
-p.managment {
+h3.managment {
   color: #1abc9c; }
 
-p.mobile {
+h3.mobile {
   color: #8e44ad; }
